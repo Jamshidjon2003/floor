@@ -41,7 +41,11 @@ class _HomePageState extends State<HomePage> {
                         snapshot.data as List<Person>;
                     return ListView.separated(
                       itemBuilder: (_, index) {
-                        return ListTile( leading: Icon(Icons.circle),
+                        return ListTile(
+                          leading: Icon(
+                            Icons.circle,
+                            color: Colors.green,
+                          ),
                           title: Text(peopleName[index].name),
                           contentPadding: EdgeInsets.zero,
                           trailing: IconButton(
@@ -77,11 +81,10 @@ class _HomePageState extends State<HomePage> {
                     controller: _nameController,
                     decoration: const InputDecoration(
                       border: OutlineInputBorder(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(12),
-                          bottomLeft: Radius.circular(12),
-                        )
-                      ),
+                          borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(12),
+                        bottomLeft: Radius.circular(12),
+                      )),
                       labelText: "Name",
                     ),
                   ),
@@ -99,6 +102,7 @@ class _HomePageState extends State<HomePage> {
                     height: 65,
                     width: 65,
                     decoration: const BoxDecoration(
+                      // color: Colors.white10,
                         color: Color(0xff333333),
                         borderRadius: BorderRadius.only(
                           topRight: Radius.circular(12),
